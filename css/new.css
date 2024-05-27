@@ -1,0 +1,277 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900);
+@font-face {
+	font-family: 'Bebas'; 
+	src: url(../fonts/Bebas.ttf); 
+}
+* {
+  box-sizing: border-box;
+  outline:none;
+}
+li {
+    list-style-type: none;
+   }
+   ul {
+    margin-left: 0; 
+    padding-left: 0; 
+   }
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow:hidden;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #262526;
+    position: relative;
+     overflow:hidden;
+}
+ul>li>a{text-decoration: none;}
+.navbar{
+    padding-top: 23px;
+    z-index: 99;
+}
+.menu-menu-container{
+    align-items: center;
+    display: flex;
+}
+.menu{
+    display: flex;
+    margin-bottom: 0px;
+    align-items: center;
+}
+.navbar-expand-lg .navbar-nav .nav-link, .menu-item {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+.nav-link, .menu-item a{
+    color: #F2E1C2;
+    text-transform: uppercase;
+}
+.nav-link:hover, .nav-link:focus, .menu-item:hover, .menu-item:focus{
+    color: #F23207;
+}
+.menu-item a:hover, .menu-item a:focus{
+    color: #F23207;
+}
+.btn-mars{
+    margin-left: 25px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    border-radius: 4px;
+    color: #262526;
+    background: #F2E1C2;
+    text-transform: uppercase;
+}
+.btn-mars:hover{
+    background: #F23207;
+    border-color: #F23207;
+    color: #F2E1C2;
+}
+/* =============дымка==================== */
+.fog::before,
+.fog::after,
+.fog div::before, 
+.fog div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.fog div::before, 
+.fog div::after    {
+    left: 100%;
+}
+.fog::before, 
+.fog div::before {
+    background-image: url(../images/fog-1.png);
+    animation: fogmove 20s linear 0s infinite;
+}
+.fog::after, 
+.fog div::after {
+    background-image: url(../images/fog-2.png);
+    animation: fogmove 10s linear 0s infinite;
+}
+@keyframes fogmove {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.header{
+    position: absolute;
+    width: 100%;
+}
+.overlay {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+h2{
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: 2.5%;
+    color: #F23207;
+    position: absolute;
+    z-index: 9;
+}
+.overlay h1 {
+    padding-top: 142px;
+    font-family: 'Bebas';
+    height:115vh;
+    width:115vW; 
+    font-size: 37.24vw;    
+    color: #fff;       
+    mix-blend-mode: multiply;    
+    text-align: center;
+    background: url(../images/fon1.jpg) no-repeat;
+    background-size:cover;
+    transition: all 60ms ease;
+    z-index: 3;
+}
+
+/* ==============модальное окно========================= */
+.modal{--bs-modal-header-border-color:none}
+.modal-dialog{
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
+    border: none;
+}
+.modal-header{padding-bottom: 68px;}
+.modal-content{
+    padding: 100px 122px;
+    height: 100vh;
+    background: #F2E1C2;
+}
+.modal-title{
+    font-family:'Bebas';
+    font-weight: 700;
+    font-size: 114px;
+    line-height: 114px;
+}
+.modal-header .btn-close{
+    margin: -90px 0px 100px auto;
+    color: #fff;    
+    border-radius: 0px;    
+}
+.btn-close{
+    opacity: 1;
+    --bs-btn-close-bg:url(../images/close.png);
+    
+}
+
+.bron{
+    display: flex;
+    justify-content: space-between;
+}
+.data-zaezd>label{
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.data-zaezd__input{
+   width: 387px;
+}
+.data-zaezd__input>input[type=date],[ type="number"]{
+    width: 100%;    
+    border: 0px;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    background: #F2E1C2;
+}
+.bron__button {text-align: end;}
+.btn__bron{
+    width: 100%;
+    max-width: 387px;
+    height: 40px;
+    color: #F2E1C2;
+    background: #262526;
+    border: #262526;
+    border-radius: 4px;
+    margin-top: 60px;
+    font-weight: 600;
+}
+.btn__bron:hover{
+    background: #F2E1C2;
+    color: #262526;
+    border:2px solid #262526;
+}
+.line {
+  width: 3px;
+  height: 605px;
+  position: absolute;
+  top: 194px;
+  left: 342px;
+  background-color: #fff;
+  z-index: 100;
+  animation-name: animeline;
+  animation-duration: 3s;
+
+}
+@keyframes animeline {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 302;
+  }
+  50% {
+    height: 304;
+  }
+
+}
+h1 {
+	font-size: 2em;
+	/* margin: 0.67em 0; */
+}
+.fog p {
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 43.88px;
+  letter-spacing: 0.025em;
+  color: #F23207;
+  position: absolute;
+  top: 200px;
+  left: 375px;
+  z-index: 20;
+}
+
+/* .wrap {
+  position: relative;
+} */

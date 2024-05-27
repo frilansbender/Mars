@@ -1,0 +1,194 @@
+
+@font-face {
+	font-family: 'Bebas'; 
+	src: url(/fonts/Bebas.ttf); 
+}
+
+
+h2{
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: 2.5%;
+    color: #F23207;
+}
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow:hidden;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #262526;
+    position: relative;
+
+   
+}
+.navbar{z-index: 99;}
+.nav-link{
+    color: #F2E1C2;
+    text-transform: uppercase;
+}
+.nav-link:hover, .nav-link:focus{
+    color: #F23207;
+}
+.btn-mars{
+    font-family: "Montserrat";
+    font-weight: 500;
+    border-radius: 4px;
+    color: #262526;
+    background: #F2E1C2;
+    text-transform: uppercase;
+}
+.btn-mars:hover{
+    background: #F23207;
+    border-color: #F23207;
+    color: #F2E1C2;
+}
+.wrapper{
+    height:115vh;
+    width:115vW;
+    background: url(/images/fon.png) no-repeat;
+    background-position: center;
+    background-size:cover;
+    transition: all 60ms ease;
+    z-index: 3;
+}
+/* =============дымка==================== */
+.fog::before,
+.fog::after,
+.fog div::before, 
+.fog div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.fog div::before, 
+.fog div::after    {
+    left: 100%;
+}
+.fog::before, 
+.fog div::before {
+    background-image: url(/images/fog-1.png);
+    animation: fogmove 20s linear 0s infinite;
+}
+.fog::after, 
+.fog div::after {
+    background-image: url(/images/fog-2.png);
+    animation: fogmove 10s linear 0s infinite;
+}
+@keyframes fogmove {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+/* ================================================= */
+/* ========видео в тексте=========================== */
+/* .banner{
+    position: absolute;
+    width: 70%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; 
+} 
+/* .banner video{
+    position: absolute;    
+    object-fit: cover;
+    z-index: 2;
+    position: relative;
+} */
+/* .banner h1{
+    font-family: "Bebas";   
+    position: absolute;       
+    background: url(/images/fon.png) no-repeat;
+    font-size: 715.25px;
+    line-height:715.25px ;
+    letter-spacing: -8px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;    
+    mix-blend-mode: screen;
+    
+} */
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.overlay {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.overlay h2 {
+   
+   
+    font-weight: 600;
+    margin: 2rem 3rem 0;
+    mix-blend-mode: overlay;
+    padding: 5px 15px;
+    text-align: center;
+    font-family: "Bebas";   
+    position: absolute;       
+    background: url(/images/fon.png) no-repeat;
+    font-size: 715.25px;
+    line-height:715.25px ;
+    height:115vh;
+    width:115vW; 
+    background-position: center;
+    background-size:cover;
+    transition: all 60ms ease;
+    z-index: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
